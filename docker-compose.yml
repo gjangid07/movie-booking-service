@@ -1,0 +1,10 @@
+version: '3.0'
+services:
+  webserver:
+    image: nginx
+  db:
+    image: docker-selfservice-release.dr.corp.adobe.com/postgres:11.11-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: booking-service-db
